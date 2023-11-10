@@ -1,21 +1,22 @@
 import React, { Component } from 'react'
+import { Link } from 'react-router-dom';
 import './AdminNavBar.css'
-import AdminProfile from './AdminProfile'
 
-class AdminDashBoard extends Component {
+class AdminNavbar extends Component {
     render() {
         return (
             <div className='vertical-navbar'>
                 <ul className='navbar-list'>
-                    <li><a href='/AdminDashBoard'>Dashboard</a></li>
-                    <li><a href='/AdminMaps'>Maps</a></li>
-                    <li><a href='/AdminProfile'>Profile</a></li>
-                    <li><a href='/AdminSettings' >Settings</a></li>
+                    <li><Link to='/AdminDashBoard'>Dashboard</Link></li>
+                    <li><Link to='/AdminMaps'>Maps</Link></li>
+                    <li><Link to='/AdminManage'>Manage Admin</Link></li>
+                    <li><Link to='/AdminProfile'>Profile</Link></li>
+                    <li><Link to='/AdminSettings'>Settings</Link></li>
                 </ul>
             </div>
         )
     }
 }
 
-export default AdminDashBoard
+export default AdminNavbar
 
